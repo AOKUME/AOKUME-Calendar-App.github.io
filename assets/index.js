@@ -27,7 +27,8 @@ $(document).ready(function(){
         }
     }
 
-// Add button will create a new task //
+
+    // Add button will create a new task //
 
     $('#todo-add').on('click', function(){
         var todo = $("#todo").val();
@@ -36,14 +37,16 @@ $(document).ready(function(){
         $('#todo').val('');
     });
 
-//Delete button will remove task //
+
+    //Delete button will remove task //
 
     $(document).on("click", '.delTask', function(){
         $(this).closest("div.input-group.mb-3").remove();
         console.log("item");
     });
 
-// type press enter auto adds to list //
+
+    // type press enter auto adds to list //
 
     $('#todo').keydown(function(){
         var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -54,5 +57,9 @@ $(document).ready(function(){
             $('#todo').val('');
         }
     });
+
+    // function to save data to local storage //
+
+
 
 });
